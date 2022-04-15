@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Logo from '../../images/logo2.png'
 import SocialMediaLogin from '../SocialMediaLogin/SocialMediaLogin';
 import './SignUp.css'
@@ -52,7 +52,7 @@ const SignUp = () => {
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     if (user) {
-        navigate('/')
+        navigate('/home')
     }
 
     if (loading) {
