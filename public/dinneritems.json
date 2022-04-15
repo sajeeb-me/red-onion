@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Beef Steak",
+        "slogan": "Food you will love to share",
+        "price": 18.99,
+        "img": "./items/dinner/dinner1.png"
+    },
+    {
+        "id": 2,
+        "name": "Honey Soy Glazed",
+        "slogan": "Food you will love to share",
+        "price": 13.99,
+        "img": "./items/dinner/dinner2.png"
+    },
+    {
+        "id": 3,
+        "name": "Tarragon Rubbed Salmon",
+        "slogan": "Food you will love to share",
+        "price": 15.99,
+        "img": "./items/dinner/dinner3.png"
+    },
+    {
+        "id": 4,
+        "name": "Indian Lunch",
+        "slogan": "Food you will love to share",
+        "price": 9.99,
+        "img": "./items/dinner/dinner4.png"
+    },
+    {
+        "id": 5,
+        "name": "Fried Chicken Bento",
+        "slogan": "Food you will love to share",
+        "price": 15.99,
+        "img": "./items/dinner/dinner5.png"
+    },
+    {
+        "id": 6,
+        "name": "Healthy Meal Plan",
+        "slogan": "Food you will love to share",
+        "price": 23.99,
+        "img": "./items/dinner/dinner6.png"
+    }
+]

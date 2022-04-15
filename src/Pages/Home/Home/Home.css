@@ -1,0 +1,7 @@
+.header-body {
+    height: 450px;
+    background-image: url('../../../images/bannerbackground.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
