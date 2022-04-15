@@ -1,5 +1,6 @@
 import React from 'react';
 import Foods from '../Foods/Foods';
+import WhyChooseUs from '../WhyChooseUs/WhyChooseUs';
 import './Home.css'
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <section className='foods-container my-10'>
                 <Foods />
             </section>
+            <WhyChooseUs />
         </div>
     );
 };

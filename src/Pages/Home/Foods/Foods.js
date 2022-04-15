@@ -6,11 +6,14 @@ const Foods = () => {
     return (
         <div>
             <section className='flex justify-center gap-10'>
-                <CustomLink to='/home/breakfast'>Breakfast</CustomLink>
-                <CustomLink to='/home/lunch'>Lunch</CustomLink>
-                <CustomLink to='/home/dinner'>Dinner</CustomLink>
+                <CustomLink className='py-1' to='/home/breakfast'>Breakfast</CustomLink>
+                <CustomLink className='py-1' to='/home/lunch'>Lunch</CustomLink>
+                <CustomLink className='py-1' to='/home/dinner'>Dinner</CustomLink>
             </section>
             <Outlet />
+            <section>
+                <button className='bg-rose-600 text-white py-2 px-7 rounded-full my-5'>Checkout Your Food</button>
+            </section>
         </div>
     );
 };
