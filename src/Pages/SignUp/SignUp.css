@@ -1,0 +1,17 @@
+.form-container {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.form-container input {
+    display: block;
+    margin: 15px;
+    padding: 10px;
+    width: 400px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-container input:not([type=submit]) {
+    background-color: rgb(228, 234, 238);
+}

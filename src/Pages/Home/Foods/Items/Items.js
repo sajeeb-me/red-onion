@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Items = ({ item }) => {
+    const navigate = useNavigate();
     const { name, slogan, price, img } = item
     return (
-        <div className='w-[300px] mx-auto py-5 rounded-lg hover:shadow-xl duration-300 ease-in'>
+        <div onClick={() => navigate('/food-details')} className='w-[300px] mx-auto py-5 rounded-lg hover:shadow-xl duration-300 ease-in'>
             <section>
                 <div className='flex justify-center'>
                     <img className='w-[150px]' src={img} alt="" />

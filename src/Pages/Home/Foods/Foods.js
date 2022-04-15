@@ -1,8 +1,9 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import CustomLink from '../../Shared/Header/CustomLink/CustomLink';
 
 const Foods = () => {
+    const navigate = useNavigate();
     return (
         <div>
             <section className='flex justify-center gap-10'>
@@ -12,7 +13,7 @@ const Foods = () => {
             </section>
             <Outlet />
             <section>
-                <button className='bg-rose-600 text-white py-2 px-7 rounded-full my-5'>Checkout Your Food</button>
+                <button onClick={() => (navigate('/cart'))} className='bg-rose-600 text-white py-2 px-7 rounded-full my-5'>Checkout Your Food</button>
             </section>
         </div>
     );

@@ -9,7 +9,7 @@ const ChooseDetail = ({ detail }) => {
                 <img src={img} alt="" />
             </div>
             <div className='flex items-start mt-5 gap-3 px-2'>
-                <img className='h-8' src={icon} alt="" />
+                <img className='h-8 mt-1' src={icon} alt="" />
                 <div className='text-left'>
                     <h3 className='text-lg font-semibold'>{title}</h3>
                     <p className='opacity-60'><small>{description}</small></p>
