@@ -1,5 +1,6 @@
 import React from 'react';
 import FooterLogo from '../../../images/logo.png'
+import './Footer.css'
 
 const Footer = () => {
     const today = new Date()
@@ -10,7 +11,7 @@ const Footer = () => {
                 <div>
                     <img className='h-10' src={FooterLogo} alt="" />
                 </div>
-                <div className='flex gap-10 text-sm font-light opacity-60'>
+                <div className='footer-text flex gap-10 text-sm font-light opacity-60'>
                     <div>
                         <p>About Online food</p>
                         <p>Read our blog</p>
