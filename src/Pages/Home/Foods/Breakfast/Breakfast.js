@@ -1,8 +1,9 @@
 // import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Items from '../Items/Items';
 
 const Breakfast = () => {
-    const breakfastItems = [
+    /* const breakfastItems = [
         {
             "id": 1,
             "name": "Beef Steak",
@@ -45,17 +46,17 @@ const Breakfast = () => {
             "price": 23.99,
             "img": "https://i.ibb.co/F7MWFZC/breakfast2.png"
         }
-    ]
-    // const [items, setItems] = useState([]);
-    // useEffect(() => {
-    //     fetch('breakfastitems.json')
-    //         .then(res => res.json())
-    //         .then(data => setItems(data))
-    // }, [items])
+    ] */
+    const [items, setItems] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/foods/breakfast')
+            .then(res => res.json())
+            .then(data => setItems(data))
+    }, [])
     return (
         <div className='grid grid-cols-3 px-[120px] my-10'>
             {
-                breakfastItems.map(item => <Items key={item.id} item={item} />)
+                items.map(item => <Items key={item._id} item={item} />)
             }
         </div>
     );

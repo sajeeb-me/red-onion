@@ -11,14 +11,14 @@ const ChooseUsDetails = () => {
             "icon": "https://i.ibb.co/LvdqtZ0/Group-204.png"
         },
         {
-            "id": 1,
+            "id": 2,
             "img": "https://i.ibb.co/r3fhyy0/choose-us-2.png",
             "title": "A Good Auto Responder",
             "description": "There are many variations of passages of Lorem Ipsum available, but the majority.",
             "icon": "https://i.ibb.co/GMWmt1n/Group-1133.png"
         },
         {
-            "id": 1,
+            "id": 3,
             "img": "https://i.ibb.co/zJHGsqn/choose-us-3.png",
             "title": "Home Delivery",
             "description": "There are many variations of passages of Lorem Ipsum available, but the majority.",

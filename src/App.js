@@ -2,9 +2,12 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Cart from './Pages/Cart/Cart';
 import FoodDetails from './Pages/Home/FoodDetails/FoodDetails';
+import AddLunch from './Pages/Home/Foods/AddLunch/AddLunch';
 import Breakfast from './Pages/Home/Foods/Breakfast/Breakfast';
 import Dinner from './Pages/Home/Foods/Dinner/Dinner';
+import EditLunch from './Pages/Home/Foods/EditLunch/EditLunch';
 import Lunch from './Pages/Home/Foods/Lunch/Lunch';
+import UpdateLunch from './Pages/Home/Foods/UpdateLunch/UpdateLunch';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
@@ -26,6 +29,21 @@ function App() {
           <Route path='lunch' element={<Lunch />} />
           <Route path='dinner' element={<Dinner />} />
         </Route>
+        <Route path='/lunch/add_lunch' element={
+          <RequireAuth>
+            <AddLunch />
+          </RequireAuth>
+        } />
+        <Route path='/lunch/edit_lunch' element={
+          <RequireAuth>
+            <EditLunch />
+          </RequireAuth>
+        } />
+        <Route path='/lunch/update_lunch/:id' element={
+          <RequireAuth>
+            <UpdateLunch />
+          </RequireAuth>
+        } />
         <Route path='/food-details' element={
           <RequireAuth>
             <FoodDetails />
