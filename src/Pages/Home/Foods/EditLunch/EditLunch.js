@@ -6,7 +6,7 @@ const EditLunch = () => {
     const [items, setItems] = useLunch()
     const handleDelete = id => {
         console.log(id)
-        fetch(`http://localhost:5000/foods/lunch/${id}`, {
+        fetch(`https://desolate-savannah-70981.herokuapp.com/foods/lunch/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

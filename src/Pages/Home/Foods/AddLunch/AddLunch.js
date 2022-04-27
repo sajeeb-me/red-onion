@@ -9,7 +9,7 @@ const AddLunch = () => {
         const img = event.target.img.value;
         const item = { name, slogan, price, img };
         console.log(item)
-        fetch('http://localhost:5000/foods/lunch', {
+        fetch('https://desolate-savannah-70981.herokuapp.com/foods/lunch', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

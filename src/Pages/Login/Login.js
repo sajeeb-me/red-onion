@@ -7,6 +7,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import PageLoading from '../PageLoading/PageLoading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+import useToken from '../../Hooks/useToken';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -31,12 +33,13 @@ const Login = () => {
         userError,
     ] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+    const [token] = useToken(signInUser);
 
     useEffect(() => {
 
     }, [userError])
 
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 
@@ -59,6 +62,8 @@ const Login = () => {
             }
         } else {
             await signInWithEmailAndPassword(email, password)
+
+            // navigate(from, { replace: true })
         }
 
     }

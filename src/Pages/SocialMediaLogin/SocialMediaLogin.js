@@ -4,9 +4,20 @@ import FacebookIcon from '../../images/social-icon/facebook.png'
 import GithubIcon from '../../images/social-icon/github.png'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import useToken from '../../Hooks/useToken';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SocialMediaLogin = () => {
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/home'
+
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [token] = useToken(user);
+
+    if (token) {
+        navigate(from, { replace: true });
+    }
     return (
         <div className='flex justify-center pl-5 my-8'>
             <div>

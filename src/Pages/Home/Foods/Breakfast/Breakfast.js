@@ -49,7 +49,7 @@ const Breakfast = () => {
     ] */
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/foods/breakfast')
+        fetch('https://desolate-savannah-70981.herokuapp.com/foods/breakfast')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])

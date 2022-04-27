@@ -4,8 +4,9 @@ import SocialMediaLogin from '../SocialMediaLogin/SocialMediaLogin';
 import './SignUp.css'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import PageLoading from '../PageLoading/PageLoading';
+import useToken from '../../Hooks/useToken';
 
 const SignUp = () => {
     const [name, setName] = useState({ value: "", error: "" });
@@ -14,6 +15,8 @@ const SignUp = () => {
     const [confirmPassword, setConfirmPassword] = useState({ value: "", error: "" });
 
     const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/home'
 
     const handleGetName = nameInput => {
         if (nameInput.length > 0) {
@@ -50,9 +53,11 @@ const SignUp = () => {
         loading,
         userError,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [token] = useToken(user);
 
-    if (user) {
-        navigate('/home')
+    if (token) {
+        // navigate('/home')
+        navigate(from, { replace: true });
     }
 
     if (loading) {

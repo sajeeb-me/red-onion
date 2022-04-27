@@ -5,7 +5,7 @@ const UpdateLunch = () => {
     const { id } = useParams()
     const [lunchItem, setLunchItem] = useState({})
     useState(() => {
-        fetch(`http://localhost:5000/foods/lunch/${id}`)
+        fetch(`https://desolate-savannah-70981.herokuapp.com/foods/lunch/${id}`)
             .then(res => res.json())
             .then(data => setLunchItem(data))
     }, [])
@@ -17,7 +17,7 @@ const UpdateLunch = () => {
         const img = event.target.img.value;
         const item = { name, slogan, price, img };
         // console.log(item)
-        fetch(`http://localhost:5000/foods/lunch/${id}`, {
+        fetch(`https://desolate-savannah-70981.herokuapp.com/foods/lunch/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
